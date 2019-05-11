@@ -1,0 +1,23 @@
+// FLEXBOX CSS GRID
+// by Laptev Pavel
+
+// Variables
+$desktop-breakpoint: 1400px;
+$tablet-breakpoint: 768px;
+$mobile-breakpoint: 375px;
+
+// Classes
+.grid {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  max-width: $desktop-breakpoint;
+  padding: 0 40px;
+  @media screen and (max-width: $tablet-breakpoint) {
+    padding: 0 40px;
+  }
+  @media screen and (max-width: $mobile-breakpoint) {
+    padding: 0 20px;
+  }
+}
