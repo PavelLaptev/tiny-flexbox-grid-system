@@ -1,23 +1,96 @@
 // FLEXBOX CSS GRID
 // by Laptev Pavel
 
-// Variables
-$desktop-breakpoint: 1400px;
-$tablet-breakpoint: 768px;
-$mobile-breakpoint: 375px;
+// VARiABLES
+// desktop grid
+$grid-desktop-columns: 12;
+$grid-desktop-sideMargin: 80px;
+$grid-desktop-gutter: 40px;
+$grid-desktop-breakpoint: 1400px;
 
-// Classes
+// tablet grid
+$grid-tablet-columns: 12;
+$grid-tablet-sideMargin: 60px;
+$grid-tablet-gutter: 30px;
+$grid-tablet-breakpoint: 1020px;
+
+// mobile grid
+$grid-mobile-columns: 4;
+$grid-mobile-sideMargin: 32px;
+$grid-mobile-gutter: 20px;
+$grid-mobile-breakpoint: 520px;
+
+// pixels to % variables
+$desk-grid-width: 100% -
+  (($grid-desktop-sideMargin * 2 / $grid-desktop-breakpoint) * 100%);
+$tab-grid-width: 100% -
+  (($grid-tablet-sideMargin * 2 / $grid-tablet-breakpoint) * 100%);
+$mob-grid-width: 100% -
+  (($grid-mobile-sideMargin * 2 / $grid-mobile-breakpoint) * 100%);
+
+$desk-gutter: (
+  (
+      $grid-desktop-gutter /
+        ($grid-desktop-breakpoint - ($grid-desktop-sideMargin * 2))
+    ) * 100%
+);
+$tab-gutter: (
+  (
+      $grid-tablet-gutter /
+        ($grid-tablet-breakpoint - ($grid-tablet-sideMargin * 2))
+    ) * 100%
+);
+$mob-gutter: (
+  (
+      $grid-mobile-gutter /
+        ($grid-mobile-breakpoint - ($grid-mobile-sideMargin * 2))
+    ) * 100%
+);
+
+// FUNCTIONS
+@function col-width($i, $columns) {
+  @return 100% / $columns * $i;
+}
+
+@mixin col-props($i, $columns, $gutter) {
+  width: col-width($i, $columns);
+  padding: 0 $gutter/2;
+}
+
+@mixin columns-loop($name, $columns, $gutter) {
+  @for $i from 0 through $columns {
+    &-#{$name}-#{$i} {
+      @include col-props($i, $columns, $gutter);
+    }
+    &-#{$name}-shift-#{$i} {
+      margin-left: col-width($i, $columns);
+    }
+  }
+}
+
+// CLASSES
 .grid {
+  box-sizing: border-box;
   display: flex;
   margin-left: auto;
   margin-right: auto;
   flex-wrap: wrap;
-  max-width: $desktop-breakpoint;
-  padding: 0 40px;
-  @media screen and (max-width: $tablet-breakpoint) {
-    padding: 0 40px;
+  width: $desk-grid-width;
+  max-width: $grid-desktop-breakpoint;
+  @media screen and (max-width: $grid-tablet-breakpoint) {
+    width: $tab-grid-width;
   }
-  @media screen and (max-width: $mobile-breakpoint) {
-    padding: 0 20px;
+  @media screen and (max-width: $grid-mobile-breakpoint) {
+    width: $mob-grid-width;
+  }
+}
+
+.col {
+  @include columns-loop(desk, $grid-desktop-columns, $desk-gutter);
+  @media screen and (max-width: $grid-tablet-breakpoint) {
+    @include columns-loop(tab, $grid-tablet-columns, $tab-gutter);
+  }
+  @media screen and (max-width: $grid-mobile-breakpoint) {
+    @include columns-loop(mob, $grid-mobile-columns, $mob-gutter);
   }
 }

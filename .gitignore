@@ -1,0 +1,14 @@
+# Mac crap
+.DS_Store
+
+# Misc
+*.log
+
+# Prepros
+prepros.cfg
+prepros-6.config
+
+
+# Source files
+index.pug
+scss/styles.scss
