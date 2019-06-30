@@ -47,14 +47,16 @@ $mob-gutter: (
     ) * 100%
 );
 
-// FUNCTIONS
+// FUNCTIONS AND MiXINS
 @function col-width($i, $columns) {
   @return 100% / $columns * $i;
 }
 
 @mixin col-props($i, $columns, $gutter) {
+  box-sizing: border-box;
   width: col-width($i, $columns);
-  padding: 0 $gutter/2;
+  padding-left: $gutter/2;
+  padding-right: $gutter/2;
 }
 
 @mixin columns-loop($name, $columns, $gutter) {
@@ -68,21 +70,30 @@ $mob-gutter: (
   }
 }
 
-// CLASSES
-.grid {
+@mixin grid-base {
   box-sizing: border-box;
   display: flex;
   margin-left: auto;
   margin-right: auto;
   flex-wrap: wrap;
-  width: $desk-grid-width;
   max-width: $grid-desktop-breakpoint;
+}
+
+// CLASSES
+.grid {
+  @include grid-base;
+  width: $desk-grid-width;
   @media screen and (max-width: $grid-tablet-breakpoint) {
     width: $tab-grid-width;
   }
   @media screen and (max-width: $grid-mobile-breakpoint) {
     width: $mob-grid-width;
   }
+}
+
+.grid-0 {
+  @include grid-base;
+  width: 100%;
 }
 
 .col {

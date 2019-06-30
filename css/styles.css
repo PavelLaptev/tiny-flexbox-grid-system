@@ -5,6 +5,51 @@ html {
 body {
   font-family: "Roboto Mono", monospace; }
 
-.header__title {
-  text-transform: uppercase;
-  font-weight: 700; }
+.header {
+  margin-top: 2rem;
+  margin-bottom: 3rem; }
+  .header__title {
+    text-transform: uppercase;
+    font-weight: 700; }
+    .header__title h1 {
+      margin: 1rem 0; }
+  .header__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end; }
+    .header__menu ul {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin: 1rem 0;
+      padding: 0;
+      list-style-type: none; }
+      .header__menu ul li {
+        margin-right: 20px; }
+        .header__menu ul li a {
+          color: black;
+          text-transform: uppercase;
+          -webkit-transition: all 0.16s ease;
+          -o-transition: all 0.16s ease;
+          transition: all 0.16s ease; }
+          .header__menu ul li a:hover {
+            color: #f45; }
+
+.g-c {
+  height: 112px; }
+
+.about-section {
+  margin-top: 3rem; }
+  .about-section h1 {
+    text-transform: uppercase;
+    font-weight: 500; }
