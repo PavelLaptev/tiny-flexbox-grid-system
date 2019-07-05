@@ -2,96 +2,128 @@
 <head>
   <meta charset="utf-8">
   <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+  <meta name="description" content="Flexbox Grid System">
+  <meta name="author" content="Pavel Laptev">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/prism.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 </head>
-<div class="wrap">
-  <div class="header grid">
-    <div class="header__title col-desk-8">
-      <h1><span style="font-size: 5rem;">Tiny </span><span style="font-size: 4rem;">flexbox </span><span style="font-size: 3rem;">grid </span><span style="font-size: 2rem;">percentage </span><span style="font-size: 1rem;">system </span><span style="font-size: 0.8rem;">(scss, CSS)</span></h1>
+<body>
+  <div class="wrap">
+    <div class="header grid">
+      <div class="header__title col-desk-6 col-tab-10 col-mob-4"><span style="font-size: 3.4rem;">Tiny </span><span style="font-size: 2.7rem;">percentage </span><span style="font-size: 2.5rem;">flexbox </span><span style="font-size: 2rem;">grid </span><span style="font-size: 1rem;">system </span><span style="font-size: 0.8rem;">(scss, CSS)</span></div>
+      <div class="header__menu col-desk-6 col-tab-12">
+        <ul class="header__menu__item">
+          <li><a href="#">How To Use</a></li>
+          <li><a href="#">Examples</a></li>
+          <li><a href="#">Github</a></li>
+        </ul>
+        <div class="switcher-wrap"><span class="switcher-wrap__text">Show HTML Layout</span>
+          <div class="switcher">
+            <div class="switcher__thumb"></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="header__menu col-desk-4">
-      <ul>
-        <li><a href="#">How To Use</a></li>
-        <li><a href="#">Examples</a></li>
-        <li><a href="#">Github</a></li>
-      </ul>
+    <div class="grid">
+      <div class="html-preview col-desk-12">
+        <pre class="language-html"><code class="language-html">&ltdiv class="grid"&gt;
+  &ltdiv class="col-desk-12 col-tab-4 col-mob-2"&gt;&lt/div&gt;
+  &ltdiv class="col-desk-4 col-tab-5 col-mob-2"&gt;&lt/div&gt;
+  &ltdiv class="col-desk-3 col-tab-3 col-mob-4"&gt;&lt/div&gt;
+  &ltdiv class="col-desk-2 col-mob-2"&gt;&lt/div&gt;
+  &ltdiv class="col-desk-3 col-mob-2"&gt;&lt/div&gt;
+  &ltdiv class="col-desk-1 col-mob-2"&gt;&lt/div&gt;
+  &ltdiv class="col-desk-4 col-desk-shift-1 col-tab-shift-0 col-tab-6 col-mob-2"&gt;&lt/div&gt;
+  &ltdiv class="col-desk-4 col-mob-3"&gt;&lt/div&gt;
+  &ltdiv class="col-desk-2 col-mob-1"&gt;&lt/div&gt;
+  &ltdiv class="col-desk-1 col-mob-1"&gt;&lt/div&gt;
+  &ltdiv class="col-desk-1 col-mob-3"&gt;&lt/div&gt;
+  &ltdiv class="col-desk-1 col-mob-1"&gt;&lt/div&gt;
+  &ltdiv class="col-desk-2 col-mob-1"&gt;&lt/div&gt;
+  &ltdiv class="col-desk-2 col-desk-shift-1 col-tab-shift-0 col-tab-1 col-mob-1"&gt;&lt/div&gt;
+  &ltdiv class="col-desk-1 col-tab-7 col-mob-1"&gt;&lt/div&gt;
+  &ltdiv class="col-desk-3 col-tab-5 col-mob-4"&gt;&lt/div&gt;
+&lt/div&gt;</code></pre>
+      </div>
+    </div>
+    <div class="grid-preview grid">
+      <div class="col-desk-12 col-tab-4 col-mob-2">
+        <div class="g-c" style="background: #8FECF2"></div>
+      </div>
+      <div class="col-desk-4 col-tab-5 col-mob-2">
+        <div class="g-c" style="background: #CCF28F"></div>
+      </div>
+      <div class="col-desk-3 col-tab-3 col-mob-4">
+        <div class="g-c" style="background: #FF6464"></div>
+      </div>
+      <div class="col-desk-2 col-mob-2">
+        <div class="g-c" style="background: #2D42FF"></div>
+      </div>
+      <div class="col-desk-3 col-mob-2">
+        <div class="g-c" style="background: #F2E88F"></div>
+      </div>
+      <div class="col-desk-1 col-mob-2">
+        <div class="g-c" style="background: #FF93C7"></div>
+      </div>
+      <div class="col-desk-4 col-desk-shift-1 col-tab-shift-0 col-tab-6 col-mob-2">
+        <div class="g-c" style="background: #F9F7C5"></div>
+      </div>
+      <div class="col-desk-4 col-mob-3">
+        <div class="g-c" style="background: #4D4D4D"></div>
+      </div>
+      <div class="col-desk-2 col-mob-1">
+        <div class="g-c" style="background: #4FFFD5"></div>
+      </div>
+      <div class="col-desk-1 col-mob-1">
+        <div class="g-c" style="background: #FF93C7"></div>
+      </div>
+      <div class="col-desk-1 col-mob-3">
+        <div class="g-c" style="background: #93EBFF"></div>
+      </div>
+      <div class="col-desk-1 col-mob-1">
+        <div class="g-c" style="background: #FF6464"></div>
+      </div>
+      <div class="col-desk-2 col-mob-1">
+        <div class="g-c" style="background: #FFE81A"></div>
+      </div>
+      <div class="col-desk-2 col-desk-shift-1 col-tab-shift-0 col-tab-1 col-mob-1">
+        <div class="g-c" style="background: #D0C5F9"></div>
+      </div>
+      <div class="col-desk-1 col-tab-7 col-mob-1">
+        <div class="g-c" style="background: #F9F7C5"></div>
+      </div>
+      <div class="col-desk-3 col-tab-5 col-mob-4">
+        <div class="g-c" style="background: #000"></div>
+      </div>
+    </div>
+    <div class="about-section grid">
+      <h1 class="col-desk-12">Options</h1>
+      <div class="about-section__option col-desk-4 col-tab-6 col-mob-4">
+        <h3>Properties in variables</h3>
+        <p>Adjust any grid props, whatever you like from column size to gutters and columns amount.</p>
+      </div>
+      <div class="about-section__option col-desk-4 col-tab-6 col-mob-4">
+        <h3>Flexible units</h3>
+        <p>You don't need to thing about the grid or columns flexibility. Grid contains functions that automaticly will translate `PX` units into `%`.</p>
+      </div>
+      <div class="about-section__option col-desk-4 col-tab-6 col-mob-4">
+        <h3>Shift column option</h3>
+        <p>If you need to pass one or more columns, shift it, you can use a special class — for instance if you want to pass 2 columns `col-desk-shift-2`.</p>
+      </div>
+      <div class="about-section__option col-desk-4 col-tab-6 col-mob-4">
+        <h3>Nesting Option</h3>
+        <p>There is two ways for nesting grids. The first option — you can use regular `grid` class for a wrapper and your wrapper will have side margins or you can ise `grid-0` class, this class has all props of the regular `grid` class but with 100% width without side margins.</p>
+      </div>
+      <div class="about-section__option col-desk-4 col-tab-6 col-mob-4">
+        <h3>3 breakpoint</h3>
+        <p>The grid has 3 breakpoints — for desktop, tablet and mobile. Because all props written as variables you can adjust or even add aditional.</p>
+      </div>
     </div>
   </div>
-  <div class="grid-preview grid">
-    <div class="col-desk-12">
-      <div class="g-c" style="background: #8FECF2"></div>
-    </div>
-    <div class="col-desk-4">
-      <div class="g-c" style="background: #CCF28F"></div>
-    </div>
-    <div class="col-desk-3">
-      <div class="g-c" style="background: #FF6464"></div>
-    </div>
-    <div class="col-desk-2">
-      <div class="g-c" style="background: #2D42FF"></div>
-    </div>
-    <div class="col-desk-3">
-      <div class="g-c" style="background: #F2E88F"></div>
-    </div>
-    <div class="col-desk-1">
-      <div class="g-c" style="background: #FF93C7"></div>
-    </div>
-    <div class="col-desk-4 col-desk-shift-1">
-      <div class="g-c" style="background: #F9F7C5"></div>
-    </div>
-    <div class="col-desk-4">
-      <div class="g-c" style="background: #4D4D4D"></div>
-    </div>
-    <div class="col-desk-2">
-      <div class="g-c" style="background: #4FFFD5"></div>
-    </div>
-    <div class="col-desk-1">
-      <div class="g-c" style="background: #FF93C7"></div>
-    </div>
-    <div class="col-desk-1">
-      <div class="g-c" style="background: #93EBFF"></div>
-    </div>
-    <div class="col-desk-1">
-      <div class="g-c" style="background: #FF6464"></div>
-    </div>
-    <div class="col-desk-2">
-      <div class="g-c" style="background: #FFE81A"></div>
-    </div>
-    <div class="col-desk-2 col-desk-shift-1">
-      <div class="g-c" style="background: #D0C5F9"></div>
-    </div>
-    <div class="col-desk-1">
-      <div class="g-c" style="background: #F9F7C5"></div>
-    </div>
-    <div class="col-desk-3">
-      <div class="g-c" style="background: #000"></div>
-    </div>
-  </div>
-  <div class="about-section grid">
-    <h1 class="col-desk-12">Options</h1>
-    <div class="about__option">
-      <h3>Properties in variables</h3>
-      <p>That means that you can adjust any grid props.</p>
-    </div>
-    <div class="about__option">
-      <h3>Flexible units</h3>
-      <p>You don't need to thing about the grid or columns flexibility. Grid contains functions that automaticly will translate `PX` units into `%`.</p>
-    </div>
-    <div class="about__option">
-      <h3>Shift column option</h3>
-      <p>If you need to pass one or more columns, shift it, you can use a special class — for instance if you want to pass 2 columns `col-desk-shift-2`.</p>
-    </div>
-    <div class="about__option">
-      <h3>Nesting Option</h3>
-      <p>There is two ways for nesting grids. The first option — you can use regular `grid` class for a wrapper and your wrapper will have side margins or you can ise `grid-0` class, this class has all props of the regular `grid` class but with 100% width without side margins.</p>
-    </div>
-    <div class="about__option">
-      <h3>3 breakpoint</h3>
-      <p>The grid has 3 breakpoints — for desktop, tablet and mobile. Because all props written as variables you can adjust or even add aditional.</p>
-    </div>
-  </div>
-</div>
+  <script src="js/general.js"></script>
+  <script src="js/prism.js"></script>
+</body>

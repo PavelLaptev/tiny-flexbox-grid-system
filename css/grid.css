@@ -13,9 +13,9 @@
   @media screen and (max-width: 1020px) {
     .grid {
       width: 88.23529%; } }
-  @media screen and (max-width: 520px) {
+  @media screen and (max-width: 620px) {
     .grid {
-      width: 87.69231%; } }
+      width: 89.67742%; } }
 
 .grid-0 {
   -webkit-box-sizing: border-box;
@@ -266,44 +266,44 @@
   .col-tab-shift-12 {
     margin-left: 100%; } }
 
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 620px) {
   .col-mob-0 {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 0%;
-    padding-left: 2.19298%;
-    padding-right: 2.19298%; }
+    padding-left: 1.79856%;
+    padding-right: 1.79856%; }
   .col-mob-shift-0 {
     margin-left: 0%; }
   .col-mob-1 {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 25%;
-    padding-left: 2.19298%;
-    padding-right: 2.19298%; }
+    padding-left: 1.79856%;
+    padding-right: 1.79856%; }
   .col-mob-shift-1 {
     margin-left: 25%; }
   .col-mob-2 {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 50%;
-    padding-left: 2.19298%;
-    padding-right: 2.19298%; }
+    padding-left: 1.79856%;
+    padding-right: 1.79856%; }
   .col-mob-shift-2 {
     margin-left: 50%; }
   .col-mob-3 {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 75%;
-    padding-left: 2.19298%;
-    padding-right: 2.19298%; }
+    padding-left: 1.79856%;
+    padding-right: 1.79856%; }
   .col-mob-shift-3 {
     margin-left: 75%; }
   .col-mob-4 {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
-    padding-left: 2.19298%;
-    padding-right: 2.19298%; }
+    padding-left: 1.79856%;
+    padding-right: 1.79856%; }
   .col-mob-shift-4 {
     margin-left: 100%; } }
