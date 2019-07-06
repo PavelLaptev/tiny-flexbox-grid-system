@@ -3,11 +3,21 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+::-moz-selection {
+  background: #b444ff; }
+
+::selection {
+  background: #b444ff; }
+
 html {
   font-size: 16px; }
 
 body {
   font-family: "Roboto Mono", monospace; }
+
+p {
+  max-width: 640px;
+  margin-bottom: 2rem; }
 
 .header {
   margin-top: 2rem;
@@ -64,7 +74,7 @@ body {
 
 .about-section {
   margin-top: 3rem;
-  margin-bottom: 4rem; }
+  margin-bottom: 3rem; }
   .about-section h1 {
     text-transform: uppercase;
     font-weight: 500;
@@ -127,3 +137,16 @@ body {
   margin-bottom: 2rem;
   border-radius: 8px;
   display: none; }
+
+.inline-code {
+  background: #333;
+  padding: 0.6rem 1rem !important; }
+
+.footer {
+  padding-top: 2rem;
+  padding-bottom: 2rem; }
+  .footer p {
+    max-width: 100%;
+    text-align: right;
+    font-size: 14px;
+    opacity: 0.7; }

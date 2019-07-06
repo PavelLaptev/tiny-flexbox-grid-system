@@ -14,12 +14,12 @@
 <body>
   <div class="wrap">
     <div class="header grid">
-      <div class="header__title col-desk-6 col-tab-10 col-mob-4"><span style="font-size: 3.4rem;">Tiny </span><span style="font-size: 2.7rem;">percentage </span><span style="font-size: 2.5rem;">flexbox </span><span style="font-size: 2rem;">grid </span><span style="font-size: 1rem;">system </span><span style="font-size: 0.8rem;">(scss, CSS)</span></div>
+      <div class="header__title col-desk-6 col-tab-10 col-mob-4"><span style="font-size: 3.4rem;">Tiny </span><span style="font-size: 2.7rem;">percentage </span><span style="font-size: 2.5rem;">SCSS </span><span style="font-size: 2.3rem;">flexbox </span><span style="font-size: 2rem;">grid </span><span style="font-size: 1rem;">system</span></div>
       <div class="header__menu col-desk-6 col-tab-12">
         <ul class="header__menu__item">
-          <li><a href="#">How To Use</a></li>
-          <li><a href="#">Examples</a></li>
-          <li><a href="#">Github</a></li>
+          <li><a href="#how-to">How To Use</a></li>
+          <li><a href="grid.scss.zip">Download</a></li>
+          <li><a href="https://github.com/PavelLaptev/tiny-flexbox-grid-system" target="_blank">Github</a></li>
         </ul>
         <div class="switcher-wrap"><span class="switcher-wrap__text">Show HTML Layout</span>
           <div class="switcher">
@@ -108,7 +108,7 @@
       </div>
       <div class="about-section__option col-desk-4 col-tab-6 col-mob-4">
         <h3>Flexible units</h3>
-        <p>You don't need to thing about the grid or columns flexibility. Grid contains functions that automaticly will translate `PX` units into `%`.</p>
+        <p>You don't need to thing about the grid or columns flexibility. Grid contains functions that automaticly will translate PX units into `%`.</p>
       </div>
       <div class="about-section__option col-desk-4 col-tab-6 col-mob-4">
         <h3>Shift column option</h3>
@@ -122,6 +122,31 @@
         <h3>3 breakpoint</h3>
         <p>The grid has 3 breakpoints — for desktop, tablet and mobile. Because all props written as variables you can adjust or even add aditional.</p>
       </div>
+    </div>
+    <hr>
+    <div class="about-section grid" id="how-to">
+      <div class="about-section__option col-desk-6 col-tab-6 col-mob-4">
+        <h2>Instalation</h2>
+        <p>Download the grid.css and add it to your HTML.</p><code class="inline-code language-html">&ltlink rel="stylesheet" href="css/grid.css"></code>
+      </div>
+      <div class="about-section__option col-desk-6 col-tab-6 col-mob-4">
+        <h2>Usage</h2>
+        <p>There are three types of classes to controll your layout. Desktop breakpoint <code class="language-css">class="col-desk-12"</code> Tablet breakpoint <code class="language-css">class="col-tab-12"</code> Mobile breakpoint <code class="language-css">class="col-tab-4"</code>. By default max columnt amount for desktop and tablet is 12 and for mobile is 4, but you can change them in variables.</p>
+      </div>
+      <div class="about-section__option col-desk-6 col-tab-6 col-mob-4">
+        <h2>Avalible variables</h2>
+        <p>There are also three types of variables, for desktop, tablet and mobile breakpoint.</p>
+        <pre class="language-css"><code class="language-css">$grid-columns: #px;
+$grid-sideMargin: #px;
+$grid-gutter: #px;
+$grid-breakpoint: #px;</code></pre>
+      </div>
+    </div>
+    <hr>
+    <div class="grid"> 
+      <footer class="col-desk-12 footer">
+        <p>@2019 <a href="https://pavellaptev.github.io" target="_blank">Laptev Pavel</a></p>
+      </footer>
     </div>
   </div>
   <script src="js/general.js"></script>
