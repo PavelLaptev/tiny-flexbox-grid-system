@@ -70,30 +70,28 @@ $mob-gutter: (
   }
 }
 
-@mixin grid-base {
+@mixin grid-base($width) {
   box-sizing: border-box;
   display: flex;
   margin-left: auto;
   margin-right: auto;
   flex-wrap: wrap;
   max-width: $grid-desktop-breakpoint;
+  width: $width;
 }
 
 // CLASSES
 .grid {
-  @include grid-base;
-  width: $desk-grid-width;
+  @include grid-base($desk-grid-width);
   @media screen and (max-width: $grid-tablet-breakpoint) {
     width: $tab-grid-width;
   }
   @media screen and (max-width: $grid-mobile-breakpoint) {
     width: $mob-grid-width;
   }
-}
-
-.grid-0 {
-  @include grid-base;
-  width: 100%;
+  &-0 {
+    @include grid-base(100%);
+  }
 }
 
 .col {
